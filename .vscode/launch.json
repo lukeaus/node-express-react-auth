@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:3090",
+      "webRoot": "${workspaceRoot}/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Node - Launch Program",
+      // "port": 9229,
+      // "runtimeArgs": ["run-script", "start"],
+      // "console": "integratedTerminal",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/index.js"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Node - Full Stack",
+      "configurations": ["Node - Launch Program", "Launch Chrome"],
+      "protocol": "legacy"
+    }
+  ]
+}
